@@ -1,0 +1,24 @@
+program SysDelivery;
+
+uses
+  Forms,
+  iPrincipal in 'iPrincipal.pas' {frmPrincipal},
+  iSobre in 'iSobre.pas' {frmSobre},
+  iCadastroProdutos in 'iCadastroProdutos.pas' {frmCadastroProdutos},
+  uDataModule in 'uDataModule.pas' {DataModule1: TDataModule},
+  iCadastrClientes in 'iCadastrClientes.pas' {frmCadastroClientes},
+  iRealizarPedido in 'iRealizarPedido.pas' {frmRealizarPedido},
+  iPedidosRealizados in 'iPedidosRealizados.pas' {frmPedidosRealizados},
+  lMonitoraICBox in 'lMonitoraICBox.pas',
+  lThread in 'lThread.pas',
+  LazUTF8 in 'LazUTF8.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmSobre, frmSobre);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.
